@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp Note</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <h1>Recorded Tempratures from last 11 days</h1>
+
+
+    <p id="result"></p>
+    <h1>Maximum</h1> : <h1 id="result2"></h1>
+    <h1>Minimum</h1> : <h1 id="result3"></h1>
+    <h1>Average</h1> : <h1 id="result4"></h1>
+    <script>
+     let temp = [27, 29, 26, 30, 32, 28, 29, 26, 27, 31, 32];
+        let text = "";
+     for (let i = 0; i < temp.length; i++) {
+        text += temp[i] + "<br>";
+        }
+         let max = Math.max(...temp);
+         let min = Math.min(...temp);
+         let average = temp.reduce((a, b) => a + b, 0) / temp.length;
+        document.getElementById("result").innerHTML = text;
+        document.getElementById("result2").innerHTML = max;
+        document.getElementById("result3").innerHTML = min;
+        document.getElementById("result4").innerHTML = average;
+    </script>
+    <pre>
+
+    </pre>
+    <footer>
+        <section id="copy-right">
+            <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+                Syyed Muhammad Irshad 2022 <a href="#"><a href="https://webifyhub.web.app">Portfolio</a></a> 
+        
+        
+            </div>
+        
+        </section>
+        </footer>
 </body>
 </html>
